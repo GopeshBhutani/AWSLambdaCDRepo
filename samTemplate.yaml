@@ -5,7 +5,7 @@ Resources:
   CDDemoLambda:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: TransactionProcessing.lambda_handler
+      Handler: TransactionProcessing1.lambda_handler
       Runtime: python3.6
       CodeUri: .
       Description: 'Lambda function to handle POST events from SAP CPI'
@@ -13,7 +13,7 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::523415761587:role/service-role/TransactionProcessing-role-s4n1tmes'
       Events:
-        AWSTargetEndpoint:
+        AWSTargetEndpoint1:
           Type: Api
           Properties:
             Path: /transaction
